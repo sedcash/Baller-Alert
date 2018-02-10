@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Baller_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="Baller_Alert" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="135.19999999999999" y="131.78410794602701"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="uM7-aa-AwP">
             <objects>
-                <viewController id="SI5-UM-MhG" sceneMemberID="viewController">
+                <viewController id="SI5-UM-MhG" customClass="LeagueVC" customModule="Baller_Alert" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hzA-pp-XfM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,7 +105,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7KS-SG-1uD" kind="show" id="ZFd-eX-3bS"/>
+                                    <action selector="nextBtnPressed:" destination="SI5-UM-MhG" eventType="touchUpInside" id="7oh-9a-0F9"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="TGB-tT-Ev4">
@@ -132,6 +132,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mensBtnPressed:" destination="SI5-UM-MhG" eventType="touchUpInside" id="htE-PX-Y2R"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOG-oX-8tn" customClass="BorderButon" customModule="Baller_Alert" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="65" width="355" height="40"/>
@@ -140,6 +143,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="womensBtnPressed:" destination="SI5-UM-MhG" eventType="touchUpInside" id="B28-50-Zdl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4J-xw-RAJ" customClass="BorderButon" customModule="Baller_Alert" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130" width="355" height="40"/>
@@ -148,6 +154,9 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="coedBtnPreseed:" destination="SI5-UM-MhG" eventType="touchUpInside" id="HEK-Rk-dsE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -183,16 +192,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZIr-UF-eEv"/>
                     </view>
+                    <connections>
+                        <outlet property="nextBtn" destination="wdP-zk-NJ5" id="Kqt-T8-eZA"/>
+                        <segue destination="7KS-SG-1uD" kind="show" identifier="skillVCSegue" id="cRc-0b-NRh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic9-jB-N2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fzD-2V-1gS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="821.60000000000002" y="135.38230884557723"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="714-Zu-mco">
             <objects>
-                <viewController id="7KS-SG-1uD" sceneMemberID="viewController">
+                <viewController id="7KS-SG-1uD" customClass="SkillVC" customModule="Baller_Alert" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GY2-te-UY6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
